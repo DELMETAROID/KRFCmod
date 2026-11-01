@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:fullbottle_empty",
+			"data":0
+		},
+		{
+			"item":"minecraft:fireworks",
+			"data":1
+		}
+	],
+	"result":	{
+		"item":"wmod:fullbottle_rocket",
+		"data":0,
+		"count": 1
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:build_driver",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ridewatch_blank",
+		"data":0,
+		"count": 1
+	}
+}

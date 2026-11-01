@@ -1,0 +1,47 @@
+{
+	"credit": "Model Creator: DELMETAROID - Do not reuse this model.",
+	"textures": {
+		"0": "wmod:items/decade/kamenride_blank",
+		"particle": "wmod:items/decade/kamenride_blank"
+	},
+	"elements": [
+		{
+			"from": [5, 4, 7.95],
+			"to": [11, 12, 8.05],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 7.75, 10], "texture": "#0"},
+				"east": {"uv": [3.5, 7.25, 3.75, 7.5], "texture": "#0"},
+				"south": {"uv": [8.25, 0, 16, 10], "texture": "#0"},
+				"west": {"uv": [3.5, 7.25, 3.75, 7.5], "texture": "#0"},
+				"up": {"uv": [3.5, 7.25, 3.75, 7.5], "texture": "#0"},
+				"down": {"uv": [3.5, 7.25, 3.75, 7.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 4.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 4.5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"gui": {
+			"rotation": [0, 180, 0],
+			"scale": [1.75, 1.75, 1.75]
+		}
+	}
+}

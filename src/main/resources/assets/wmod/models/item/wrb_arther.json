@@ -1,0 +1,108 @@
+{
+	"credit": "Model Creator: DELMETAROID - Do not reuse this model.",
+	"textures": {
+		"0": "wmod:items/saber/wrb2",
+		"particle": "wmod:items/saber/wrb2"
+	},
+	"elements": [
+		{
+			"from": [6, 5, 7.25],
+			"to": [10, 11, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0.75, 11.75, 3, 14.75], "texture": "#0"},
+				"east": {"uv": [0, 11.75, 0.5, 14.75], "texture": "#0"},
+				"south": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"west": {"uv": [1.75, 10, 2, 11.25], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [0.75, 10, 3, 11.25], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [3, 10, 0.5, 11.2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 5, 6.75],
+			"to": [10, 11, 7.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 7]},
+			"faces": {
+				"north": {"uv": [0.75, 11.75, 3, 14.75], "texture": "#0"},
+				"east": {"uv": [0.75, 11.75, 0.875, 14.75], "texture": "#0"},
+				"south": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"west": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"up": {"uv": [3, 11.35, 0.75, 11.475], "texture": "#0"},
+				"down": {"uv": [3, 14.6, 0.75, 14.725], "texture": "#0"}
+			}
+		},
+		{
+			"from": [7.5, 4.875, 7.75],
+			"to": [8.5, 5, 8.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 4.875, 8]},
+			"faces": {
+				"north": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"east": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"south": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"west": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"up": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"},
+				"down": {"uv": [0.25, 10, 0.75, 10.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pen1",
+			"from": [7.5, 5, 8.75],
+			"to": [8.5, 6, 8.85],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 5.5, 7.5]},
+			"faces": {
+				"north": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"},
+				"east": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"},
+				"south": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"},
+				"west": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"},
+				"up": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"},
+				"down": {"uv": [15, 0.25, 16, 1.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pen2",
+			"from": [7.75, 6, 8.75],
+			"to": [8.25, 6.5, 8.85],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 6.5, 7.5]},
+			"faces": {
+				"north": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"},
+				"east": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"},
+				"south": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"},
+				"west": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"},
+				"up": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"},
+				"down": {"uv": [15, 0, 15.5, 0.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 105, 0],
+			"translation": [0, 5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 105, 0],
+			"translation": [0, 5, 0],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"ground": {
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"gui": {
+			"rotation": [0, 180, 0],
+			"scale": [2, 2, 2]
+		},
+		"head": {
+			"translation": [0, 5.75, -7.5],
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"fixed": {
+			"scale": [1.5, 1.5, 1.5]
+		}
+	}
+}

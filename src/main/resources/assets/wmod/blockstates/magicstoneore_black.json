@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "wmod:magicstoneore_black" },
+        "inventory": { "model": "wmod:magicstoneore_black" }
+    }
+}

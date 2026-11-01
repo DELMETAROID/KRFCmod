@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "wmod:items/hibiki/colored_stick_3"
+  }
+}

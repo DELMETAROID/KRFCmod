@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:wizardring_common",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_cristal",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:wizardring_fall",
+		"data":0,
+		"count": 1
+	}
+}

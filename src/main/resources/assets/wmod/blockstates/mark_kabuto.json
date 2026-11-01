@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "wmod:mark_kabuto" },
+        "inventory": { "model": "wmod:mark_kabuto" }
+    }
+}

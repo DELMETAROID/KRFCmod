@@ -1,0 +1,24 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			"AAA",
+			"AAA",
+			"AAA"
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"wmod:oniishi_ore",
+			"data":0
+			}
+		},
+
+	"result":	{
+		"item":"wmod:oniishi_ore_kurenai",
+		"data":0,
+		"count": 1
+	}
+}

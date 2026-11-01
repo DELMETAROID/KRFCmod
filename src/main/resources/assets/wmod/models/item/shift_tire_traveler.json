@@ -1,0 +1,108 @@
+{
+	"credit": "Model Creator: DELMETAROID - Do not reuse this model.",
+	"textures": {
+		"0": "wmod:items/drive/shiftcar3",
+		"particle": "wmod:items/drive/shiftcar3"
+	},
+	"elements": [
+		{
+			"from": [6, 6.125, 1.6875],
+			"to": [10, 8.125, 11.6875],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [14.25, 14, 11.25, 15.25], "texture": "#0"},
+				"east": {"uv": [10.5, 12.01, 0.5, 14.01], "texture": "#0"},
+				"south": {"uv": [4.25, 13.875, 3.5, 14.375], "texture": "#0"},
+				"west": {"uv": [0.5, 12.01, 10.5, 14.01], "texture": "#0"},
+				"up": {"uv": [11.25, 14.5, 14.25, 14], "texture": "#0"},
+				"down": {"uv": [0, 12.5, 0.5, 12], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.5, 8.125, 1.9375],
+			"to": [9.5, 9.625, 6.1875],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [14.25, 12.25, 11.25, 14], "texture": "#0"},
+				"east": {"uv": [16, 14, 15, 16], "texture": "#0"},
+				"south": {"uv": [0.5, 14.75, 0, 15.25], "texture": "#0"},
+				"west": {"uv": [15, 14, 16, 16], "texture": "#0"},
+				"up": {"uv": [0.25, 14.25, 1.75, 15.75], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 15.25, 0.5, 14.75], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.75, 5.11479, 5.48382],
+			"to": [10.25, 8.86479, 6.48382],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [16, 12, 15.75, 13.5], "texture": "#0"},
+				"east": {"uv": [15.75, 12, 14.75, 13.5], "texture": "#0"},
+				"south": {"uv": [16, 12, 15.75, 13.5], "texture": "#0"},
+				"west": {"uv": [15.75, 12, 14.75, 13.5], "texture": "#0"},
+				"up": {"uv": [15.75, 12.25, 14.75, 12.75], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [5.5, 14, 6, 13.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 8.125, 6.1875],
+			"to": [10, 9.625, 12.1875],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [4.25, 13.875, 3.5, 14.375], "texture": "#0"},
+				"east": {"uv": [6.25, 14.75, 3.25, 15.75], "texture": "#0"},
+				"south": {"uv": [2.875, 13, 2.625, 15], "texture": "#0"},
+				"west": {"uv": [3.25, 14.75, 6.25, 15.75], "texture": "#0"},
+				"up": {"uv": [10.25, 14.375, 7.25, 15.625], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [3.5, 14.375, 4.25, 13.875], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 6.125, 11.6875],
+			"to": [10, 8.125, 12.1875],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [3.75, 12.375, 3, 12.875], "texture": "#0"},
+				"east": {"uv": [4.75, 12.5, 4.5, 14.5], "texture": "#0"},
+				"south": {"uv": [2.875, 13, 2.625, 15], "texture": "#0"},
+				"west": {"uv": [4.75, 12.5, 4.5, 14.5], "texture": "#0"},
+				"up": {"uv": [3, 12.875, 3.75, 12.375], "texture": "#0"},
+				"down": {"uv": [3, 12.875, 3.75, 12.375], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [-90, 180, 180],
+			"translation": [0, 2.75, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-90, 180, 180],
+			"translation": [0, 2.75, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [30, 135, 0],
+			"translation": [1, 0.75, 0],
+			"scale": [1.35, 1.35, 1.35]
+		},
+		"head": {
+			"translation": [0, 7.75, -3.25],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"fixed": {
+			"rotation": [-90, 180, 0],
+			"translation": [0, -1, -0.75]
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			" A ",
+			" B ",
+			" C "
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"wmod:oniishi",
+			"data":5},
+
+			"B":
+			{
+			"item":"wmod:colored_stick",
+			"data":0
+			},
+			"C":
+			{
+			"item":"wmod:colored_stick",
+			"data":1
+			}
+		},
+
+	"result":	{
+		"item":"wmod:ongekibou",
+		"data":20,
+		"count": 1
+	}
+}

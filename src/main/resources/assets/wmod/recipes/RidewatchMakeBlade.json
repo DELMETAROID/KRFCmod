@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:ridewatch_blank",
+			"data":0
+		},
+		{
+			"item":"wmod:blade_spade_a",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ridewatch_blade",
+		"data":0,
+		"count": 1
+	}
+}

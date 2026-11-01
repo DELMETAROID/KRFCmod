@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"minecraft:stick",
+			"data":0
+		},
+		{
+			"item":"minecraft:dye",
+			"data":1
+		}
+	],
+	"result":	{
+		"item":"wmod:colored_stick",
+		"data":1,
+		"count": 1
+	}
+}

@@ -1,0 +1,136 @@
+package rider.wmod.items.armor.blade;
+
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+import rider.wmod.Wmod;
+import rider.wmod.init.ItemInit;
+import rider.wmod.rendering.models.items.blade.ModelGarren;
+import rider.wmod.util.IHasModel;
+
+public class ArmorGarren extends ItemArmor implements IHasModel{
+
+	public static int BeltCheck=0;
+	public static int isHenshin=0;
+	public static int isInvisible=0;
+
+	public ArmorGarren(String name,CreativeTabs tab,ArmorMaterial materialIn,EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, 1, equipmentSlotIn);
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		setCreativeTab(tab);
+		setMaxStackSize(1);
+		ItemInit.ITEMS.add(this);
+	}
+
+	@Override
+	public void registerModels()
+	{
+		Wmod.proxy.registerModel(this,0);
+	}
+
+	@Override
+	public ModelBiped getArmorModel(EntityLivingBase entityliving,ItemStack itemstack,EntityEquipmentSlot armorslot,ModelBiped _default)
+	{
+		if(itemstack != ItemStack.EMPTY)
+		{
+			if(itemstack.getItem() instanceof ItemArmor)
+			{
+				ModelGarren model = new ModelGarren();
+				model.bipedBody.showModel =armorslot ==EntityEquipmentSlot.HEAD;
+				model.isChild= _default.isChild;
+				model.isRiding=_default.isRiding;
+				model.isSneak= _default.isSneak;
+				model.rightArmPose=_default.rightArmPose;
+				model.leftArmPose= _default.leftArmPose;
+
+				return model;
+			}
+		}return null;
+	}
+
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+	{
+		//アイテム変更用
+		ItemStack offhanditem =playerIn.getHeldItemOffhand();
+		ItemStack itemstack = new ItemStack(ItemInit.GARRENBUCKLE_ITEM, 1);
+		ItemStack itemstack2 = new ItemStack(ItemInit.GARRENBUCKLE_BELT, 1);
+		ItemStack itemstack3 = new ItemStack(ItemInit.DIA_A, 1);
+
+		
+		ItemStack helditem = playerIn.getHeldItem(handIn);
+		
+		EntityEquipmentSlot entityequipmentslot = EntityLiving.getSlotForItemStack(helditem);
+		EntityEquipmentSlot entityequipmentslot2 = EntityLiving.getSlotForItemStack(itemstack3);
+		
+		ItemStack armor = playerIn.getItemStackFromSlot(entityequipmentslot);
+		ItemStack armor2 = playerIn.getItemStackFromSlot(entityequipmentslot2);
+
+		if(offhanditem.isItemEqual(itemstack))
+		{
+			playerIn.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, itemstack2);
+			offhanditem.setCount(0);
+			return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, helditem);
+		}
+
+		else if (armor==itemstack2)//ブレイバックル中
+		{
+			if (armor2.isEmpty())
+			{
+				playerIn.setItemStackToSlot(entityequipmentslot2, itemstack3.copy());
+				itemstack.setCount(0);
+				return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, armor2);
+			}
+			else//空いてない場合
+			{
+				playerIn.setItemStackToSlot(entityequipmentslot, itemstack3.copy());
+				itemstack.setCount(0);
+				return new ActionResult<ItemStack>(EnumActionResult.SUCCESS,armor2);
+			}
+		}else {
+			return new ActionResult<ItemStack>(EnumActionResult.FAIL, helditem);
+		}
+	}
+
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack item)
+	{
+		if(player.inventory.armorItemInSlot(1) != null)
+		{
+			if(player.inventory.armorItemInSlot(1).getItem()==ItemInit.GARRENBUCKLE_BELT)
+			{
+				BeltCheck=1;
+				player.addPotionEffect(new PotionEffect(MobEffects.HASTE,1,0,true,false));
+				player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE,1,0,true,false));
+			}
+			else
+			{
+				BeltCheck=0;
+			}
+		}else {
+			BeltCheck=0;
+		}
+
+		PotionEffect effect = player.getActivePotionEffect(MobEffects.INVISIBILITY);
+		if(effect!=null)
+		{
+			isInvisible=1;
+		}else {
+			isInvisible=0;
+		}
+	}
+}

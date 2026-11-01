@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "wmod:oniishi_ore" },
+        "inventory": { "model": "wmod:oniishi_ore" }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "wmod:blocks/stonepillar_block_top",
+        "side": "wmod:blocks/stonepillar_block_side"
+    }
+}

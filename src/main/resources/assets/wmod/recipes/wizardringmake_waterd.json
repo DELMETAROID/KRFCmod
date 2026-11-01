@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:wizardring_water",
+			"data":0
+		},
+				{
+			"item":"wmod:magicstone_orange",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:wizardring_water_d",
+		"data":0,
+		"count": 1
+	}
+}

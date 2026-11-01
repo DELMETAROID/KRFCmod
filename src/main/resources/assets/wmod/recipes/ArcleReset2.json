@@ -1,0 +1,15 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:arcle_amazing",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:arcle",
+		"data":0,
+		"count": 1
+	}
+}

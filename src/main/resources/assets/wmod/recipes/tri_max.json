@@ -1,0 +1,20 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:trigger_magnum",
+			"data":0
+		},
+		{
+			"item":"wmod:memory_trigger",
+			"data":0
+		}
+
+	],
+	"result":	{
+		"item":"wmod:trigger_magnum_maximum",
+		"data":0,
+		"count": 1
+	}
+}

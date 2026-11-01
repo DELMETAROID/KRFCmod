@@ -1,0 +1,15 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:magicstone_blue",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:magicstone_dust",
+		"data":0,
+		"count": 1
+	}
+}

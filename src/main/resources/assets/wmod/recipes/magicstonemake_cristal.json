@@ -1,0 +1,39 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:magicstone_red",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_blue",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_green",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_yellow",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_black",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_orange",
+			"data":0
+		},
+		{
+			"item":"wmod:magicstone_purple",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:magicstone_cristal",
+		"data":0,
+		"count": 1
+	}
+}

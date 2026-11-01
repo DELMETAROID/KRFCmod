@@ -1,0 +1,34 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			"C C",
+			"ABA",
+			" A "
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"minecraft:gold_ingot",
+			"data":0
+			},
+			"B":
+			{
+			"item":"wmod:oniishi_ore",
+			"data":0
+			},
+			"C":
+			{
+			"item":"minecraft:iron_ingot",
+			"data":0
+			}
+		},
+
+	"result":	{
+		"item":"wmod:hibiki_onkaku",
+		"data":0,
+		"count": 1
+	}
+}

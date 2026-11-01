@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "wmod:fake_diamond_block" },
+        "inventory": { "model": "wmod:fake_diamond_block" }
+    }
+}

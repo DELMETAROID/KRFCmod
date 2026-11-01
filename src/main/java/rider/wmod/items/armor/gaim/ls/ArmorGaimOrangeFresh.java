@@ -1,0 +1,193 @@
+package rider.wmod.items.armor.gaim.ls;
+
+import net.minecraft.client.model.ModelBiped;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.MobEffects;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import rider.wmod.Wmod;
+import rider.wmod.init.ItemInit;
+import rider.wmod.items.armor.gaim.sengoku.ArmorSengokuDriver;
+import rider.wmod.rendering.models.items.gaim.ModelArmsOrangeFresh;
+import rider.wmod.util.IHasModel;
+
+public class ArmorGaimOrangeFresh extends ItemArmor implements IHasModel{
+
+	public static int DriverCheck=0;
+	public static int isInvisible=0;
+
+	public ArmorGaimOrangeFresh(String name,CreativeTabs tab,ArmorMaterial materialIn,EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, 1, equipmentSlotIn);
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		setCreativeTab(tab);
+		setMaxStackSize(1);
+		ItemInit.ITEMS.add(this);
+	}
+
+	@Override
+	public void registerModels()
+	{
+		Wmod.proxy.registerModel(this,0);
+	}
+
+	@Override
+	public ModelBiped getArmorModel(EntityLivingBase entityliving,ItemStack itemstack,EntityEquipmentSlot armorslot,ModelBiped _default)
+	{
+		if(itemstack != ItemStack.EMPTY)
+		{
+			if(itemstack.getItem() instanceof ItemArmor)
+			{
+				ModelArmsOrangeFresh model = new ModelArmsOrangeFresh();
+				model.bipedBody.showModel =armorslot ==EntityEquipmentSlot.HEAD;
+				model.isChild= _default.isChild;
+				model.isRiding=_default.isRiding;
+				model.isSneak= _default.isSneak;
+				model.rightArmPose=_default.rightArmPose;
+				model.leftArmPose= _default.leftArmPose;
+
+				return model;
+			}
+		}return null;
+	}
+
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+	{
+		
+		ItemStack itemstack = playerIn.getHeldItem(handIn);
+		
+		EntityEquipmentSlot entityequipmentslot = EntityLiving.getSlotForItemStack(itemstack);
+		
+		ItemStack itemstack1 = playerIn.getItemStackFromSlot(entityequipmentslot);
+		
+		ItemStack arms_weapon = new ItemStack(ItemInit.AW_ORANGE, 1);
+
+		if(ArmorSengokuDriver.SengokuDriverCheck(playerIn))
+		{
+			playerIn.swingArm(handIn);
+			ArmorSengokuDriver.deleteArmsWeapon(playerIn);
+			playerIn.setItemStackToSlot(entityequipmentslot, itemstack.copy());	
+			itemstack.setCount(0);
+			playerIn.setItemStackToSlot(EntityEquipmentSlot.OFFHAND,arms_weapon);
+
+			if (itemstack1.isEmpty())
+			{
+				return new ActionResult<ItemStack>(EnumActionResult.SUCCESS,arms_weapon);
+			}
+			else
+			{
+				if(!worldIn.isRemote) 
+				{
+					playerIn.dropItem(itemstack1.getItem(), 1);
+				}
+				return new ActionResult<ItemStack>(EnumActionResult.SUCCESS,arms_weapon);
+			}
+		}
+		else
+		{
+			return new ActionResult<ItemStack>(EnumActionResult.FAIL, itemstack);
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	public boolean hasEffect(ItemStack stack)
+	{
+		return true;
+	}
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack item)
+	{
+		if(ArmorSengokuDriver.SengokuDriverCheck(player))
+		{
+			if(player.inventory.armorItemInSlot(1).getItem()==ItemInit.SENGOKU_DRIVER_GAIM)
+			{
+				player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH,10,0,true,false));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED,10,0,true,false));
+				player.addPotionEffect(new PotionEffect(MobEffects.HASTE,10,0,true,false));
+				if(player.getFoodStats().needFood())
+				{
+					player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()+1);
+					item.damageItem(this.getDamage(item)-10, player);
+				}
+				if((player.inventory.armorItemInSlot(0).getItem()==ItemInit.GENESIS_CORE)
+						&&(player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_LEMON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_CHERRY
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_PEACH
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MELON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MATSUBOKKURI
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MARRON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_DRAGON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_BLACK
+								))
+				{
+					DriverCheck=5;
+				}
+				else
+				{
+					DriverCheck=4;
+				}
+			}
+			else 
+			{
+				player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH,10,0,true,false));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED,10,0,true,false));
+				if(player.getFoodStats().needFood())
+				{
+					player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()+1);
+					item.damageItem(this.getDamage(item)-10, player);
+				}
+				if((player.inventory.armorItemInSlot(0).getItem()==ItemInit.GENESIS_CORE)
+						&&(player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_LEMON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_CHERRY
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_PEACH
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MELON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MATSUBOKKURI
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_MARRON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_DRAGON
+						||player.inventory.armorItemInSlot(2).getItem()==ItemInit.JIMBER_BLACK
+								))
+				{
+					DriverCheck=3;
+				}
+				else
+				{
+					DriverCheck=1;
+				}
+			}
+		}
+		else if(player.inventory.armorItemInSlot(1).getItem()==ItemInit.SENGOKU_DRIVER_STUDY)
+		{
+			DriverCheck=2;
+			if(player.getFoodStats().needFood())
+			{
+				player.getFoodStats().setFoodLevel(player.getFoodStats().getFoodLevel()+1);
+				item.damageItem(this.getDamage(item)-10, player);
+			}
+		}else 
+		{ 		
+			DriverCheck=0;
+		}
+
+		PotionEffect effect = player.getActivePotionEffect(MobEffects.INVISIBILITY);
+		if(effect!=null)
+		{
+			isInvisible=1;
+		}else {
+			isInvisible=0;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			"ABA",
+			"A A",
+			"AAA"
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"minecraft:gold_nugget",
+			"data":0
+			},
+			"B":
+			{
+			"item":"wmod:magicstone_purple",
+			"data":0
+			}
+		},
+
+	"result":	{
+		"item":"wmod:wizardring_eclipse",
+		"data":0,
+		"count": 1
+	}
+}

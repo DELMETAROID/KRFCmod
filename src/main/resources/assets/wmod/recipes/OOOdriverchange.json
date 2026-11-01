@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:ooo_driver",
+			"data":0
+		},
+		{
+			"item":"wmod:o_scanner",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ooo_driver2",
+		"data":0,
+		"count": 1
+	}
+}

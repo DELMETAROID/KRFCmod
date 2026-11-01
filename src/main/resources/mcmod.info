@@ -1,0 +1,18 @@
+[
+{
+    "modid": "wmod",
+    "name": "KamenRiderFormChangeMod",
+    "version": "0.80+R2",
+    "mcversion": "1.12.2",
+    "description": "Mod that adds belt and items to transform Kamen Riders.",
+    "credits": "Thanks to all who helped along the way.",
+    "logoFile": "",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [ "Delmetaroid" ],
+    "parent": "",
+    "screenshots": [],
+    "dependencies": [],
+    "requiredMods": [ "Forge" ]
+}
+]

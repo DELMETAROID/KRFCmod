@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:ongekibou",
+			"data":77
+		},
+		{
+			"item":"minecraft:wool",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ongekibou",
+		"data":256,
+		"count": 1
+	}
+}

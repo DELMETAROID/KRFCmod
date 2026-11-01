@@ -1,0 +1,11 @@
+{
+  "forge_marker": 1,
+    "variants": {
+     "inventory": { "model": "wmod:stone_pillar_block" },
+     "axis":{
+        "lines_y":  { "model": "wmod:stone_pillar_block" },
+        "lines_z":   { "model": "wmod:stone_pillar_block", "x": 90 },
+        "lines_x":   { "model": "wmod:stone_pillar_block", "x": 90, "y": 90 }
+ 	   }
+    }
+}

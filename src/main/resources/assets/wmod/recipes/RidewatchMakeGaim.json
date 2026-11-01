@@ -1,0 +1,23 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:ridewatch_blank",
+			"data":0
+		},
+		{
+			"item":"wmod:sengoku_driver_gaim",
+			"data":0
+		},
+		{
+			"item":"wmod:ls_orange",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ridewatch_gaim",
+		"data":0,
+		"count": 1
+	}
+}

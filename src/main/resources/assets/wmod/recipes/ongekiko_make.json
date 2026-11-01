@@ -1,0 +1,30 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			"AAA",
+			"ABA",
+			"AAA"
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"minecraft:iron_ingot",
+			"data":0
+			},
+
+			"B":
+			{
+			"item":"wmod:oniishi_ore",
+			"data":0
+			}
+		},
+
+	"result":	{
+		"item":"wmod:ongekiko_kaen",
+		"data":0,
+		"count": 1
+	}
+}

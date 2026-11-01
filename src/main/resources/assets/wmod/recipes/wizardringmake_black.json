@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:magicstone_black",
+			"data":0
+		},
+		{
+			"item":"wmod:wizardring_flame",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:wizardring_black",
+		"data":0,
+		"count": 1
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"minecraft:nether_star",
+			"data":0
+		},
+		{
+			"item":"minecraft:skull",
+			"data":5
+		},
+		{
+			"item":"minecraft:sponge",
+			"data":0
+		},
+		{
+			"item":"minecraft:totem_of_undying",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:gashatrophy_minecraft",
+		"data":0,
+		"count": 1
+	}
+}

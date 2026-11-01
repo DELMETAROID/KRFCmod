@@ -1,0 +1,20 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:garrenbuckle",
+			"data":0
+		},
+		{
+			"item":"wmod:blade_dia_a",
+			"data":0
+		}
+
+	],
+	"result":	{
+		"item":"wmod:garrenbuckle_belt",
+		"data":0,
+		"count": 1
+	}
+}

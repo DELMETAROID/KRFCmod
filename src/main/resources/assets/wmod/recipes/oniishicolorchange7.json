@@ -1,0 +1,19 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:oniishi",
+			"data":8
+		},
+		{
+			"item":"minecraft:dye",
+			"data":7
+		}
+	],
+	"result":	{
+		"item":"wmod:oniishi",
+		"data":7,
+		"count": 1
+	}
+}

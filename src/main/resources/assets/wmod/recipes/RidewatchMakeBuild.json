@@ -1,0 +1,23 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:ridewatch_blank",
+			"data":0
+		},
+		{
+			"item":"wmod:fullbottle_rabbit",
+			"data":0
+		},
+		{
+			"item":"wmod:fullbottle_tank",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:ridewatch_build",
+		"data":0,
+		"count": 1
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"type":"minecraft:crafting_shapeless",
+
+	"ingredients":	[
+		{
+			"item":"wmod:amadam_red",
+			"data":0
+		},
+		{
+			"item":"wmod:amadam_blue",
+			"data":0
+		},
+		{
+			"item":"wmod:amadam_green",
+			"data":0
+		},
+		{
+			"item":"wmod:amadam_purple",
+			"data":0
+		}
+	],
+	"result":	{
+		"item":"wmod:amadam_thunder",
+		"data":0,
+		"count": 1
+	}
+}

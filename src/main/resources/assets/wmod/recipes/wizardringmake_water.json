@@ -1,0 +1,29 @@
+{
+	"type":"minecraft:crafting_shaped",
+
+	"pattern":
+		[
+			"ABA",
+			"A A",
+			"AAA"
+		],
+		"key":
+		{
+			"A":
+			{
+			"item":"minecraft:iron_nugget",
+			"data":0
+			},
+			"B":
+			{
+			"item":"wmod:magicstone_blue",
+			"data":0
+			}
+		},
+
+	"result":	{
+		"item":"wmod:wizardring_water",
+		"data":0,
+		"count": 1
+	}
+}
