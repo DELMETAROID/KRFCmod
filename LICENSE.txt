@@ -1,3 +1,4 @@
+KamenRiderFormChangeMod(KRFCmod) License
 - Code: CC BY-NC-ND 4.0
 - Assets: CC BY-NC-ND 4.0
 
